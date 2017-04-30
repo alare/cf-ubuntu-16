@@ -12,7 +12,7 @@ RUN sudo apt-get install -y curl
 RUN sudo apt-get install -y autoconf
 RUN sudo apt-get install -y libtool
 
-RUN echo "Version 1" > ~/Version
+RUN echo "Version 0" > ~/Version
 
 ADD ./NAE/help.html /etc/NAE/help.html
 
