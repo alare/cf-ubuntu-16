@@ -15,7 +15,7 @@ RUN sudo apt-get install -y build-essential git
 
 RUN wget -nc https://github.com/google/protobuf/archive/v3.0.2.tar.gz &&  tar -xvf v3.0.2.tar.gz && cd protobuf-3.0.2 && ./autogen.sh && ./configure && make && make install
 
-RUN sudo apt-get install libprotoc8
+RUN sudo apt-get install -y libprotoc8
 
 RUN wget -nc https://github.com/protobuf-c/protobuf-c/archive/v1.2.1.tar.gz && tar -xvf v1.2.1.tar.gz && cd protobuf-c-1.2.1 && ./autogen.sh &&  ./configure CFLAGS="-O3 -DNDEBUG" CXXFLAGS="-O3 -DNDEBUG" && make && make install
 
