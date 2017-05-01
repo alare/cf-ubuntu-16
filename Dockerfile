@@ -29,8 +29,9 @@ RUN apt-get install -y libtool autoconf automake build-essential vim
 RUN apt-get install -y ibverbs-utils rdmacm-utils infiniband-diags perftest
 RUN apt-get install -y librdmacm-dev libibverbs-dev numactl libnuma-dev libaio-dev libevent-dev
 
+RUN wget -nc https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local_8.0.44-1_amd64-deb -O /tmp/cuda.deb && dpkg -i /tmp/cuda.deb && apt-get -y update && apt-get install -y cuda
 
-RUN echo "Version 2" > ~/Version
+RUN echo "Version 3" > ~/Version
 
 ADD ./NAE/help.html /etc/NAE/help.html
 
